@@ -11,5 +11,3 @@ WORKDIR /opt/app
 COPY --from=builder /opt/app/target/*.jar /opt/app/*.jar
 EXPOSE 8080
 CMD java -jar *.jar --env=prod
-
-#ENTRYPOINT ["java", "-jar", "/opt/app/*.jar"]
