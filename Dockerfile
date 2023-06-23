@@ -8,6 +8,6 @@ RUN ./mvnw clean install
 
 FROM amazoncorretto:17-alpine
 WORKDIR /opt/app
-COPY --from=builder /opt/app/target/*.jar /opt/app/*.jar
+COPY --from=builder /opt/app/target/*.jar /opt/app/publisher.jar
 EXPOSE 8080
 CMD java -jar *.jar --env=prod

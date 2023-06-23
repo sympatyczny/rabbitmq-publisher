@@ -22,7 +22,6 @@ public class QueueConfig {
         this.queueName = queueName;
         this.amqpAdmin = amqpAdmin;
     }
-
     public void createQueues() {
         amqpAdmin.declareQueue(new Queue(queueName, true));
     }
